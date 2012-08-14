@@ -70,19 +70,22 @@ Here are the modules included in the SuffixTree package:
     o SuffixTree.SubstringDict -- An application of suffix trees toward
       substring matching.  An example might help:
 
-      >>> #coding=utf-8
-      >>> from SuffixTree import SubstringDict
-      
-
-      >>> sd = SubstringDict()
-      >>> sd.__setitem__("我是python程序员",1)
-      >>> sd.__setitem__("我是ruby程序员",2)
-      >>> sd.__setitem__("我是javascript程序员",3)
-      >>> sd.__setitem__("我是android程序员",4)
-      >>> sd.__setitem__("我还是DBA",4)
-      >>> print sd[“我是”]
-      >>> print sd[“我还是”]
-
+        ###
+        >>> import SuffixTree.SubstringDict
+        >>> d = SuffixTree.SubstringDict()
+        >>> d['foobar'] = 1
+        >>> d['barfoo'] = 2
+        >>> d['forget'] = 3
+        >>> d['arfbag'] = 4
+        >>> d['a']
+        [4, 2, 1]
+        >>> d['arf']
+        [2, 4]
+        >>> d['oo']
+        [2, 1]
+        >>> d['food']
+        []
+        ###
 
       SubstringDict provides a mapping that allows for substrings of
       keys.  The keys do need to be strings though.
