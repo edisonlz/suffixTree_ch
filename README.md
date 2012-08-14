@@ -1,4 +1,4 @@
-SuffixTree --- A Suffix Tree library for Python
+SuffixTree --- A Suffix Tree library for Python Chinese 
 
 Conspirator: Danny Yoo (dyoo@hkn.eecs.berkeley.edu)
 
