@@ -20,7 +20,7 @@ class SubstringDict:
         the add() will fail.  To solve this, we use multiple
         trees."""
         key = base64.b64encode(key)
-        
+
         (index, self._next_index) = (self._next_index, self._next_index + 1)
         ok = self._trees[-1].add(key, index)
         if ok:
@@ -35,6 +35,9 @@ class SubstringDict:
     def _lookupKeys(self, subkey):
         """Given a substring of a key, return all indices that
         correspond."""
+
+        subkey = base64.b64encode(subkey)
+        
         results = []
         for tree in self._trees:
             num_matched, node, pos = tree.match(subkey)

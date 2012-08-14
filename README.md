@@ -84,5 +84,21 @@ Here are the modules included in the SuffixTree package:
       >>> print sd[“我还是”]
 
 
+
+      >>> sd = SubstringDict()
+      >>> sd["我是python程序员"] = 1
+      >>> sd["我是ruby程序员"] = 2
+      >>> sd["我是javascript程序员"] = 3
+      >>> sd["我是android程序员"] = 4
+      >>> sd["我还是DBA"] = 5
+      >>> print sd[“我还是”]
+
+
       SubstringDict provides a mapping that allows for substrings of
       keys.  The keys do need to be strings though.
+
+      支持中文的方式是使用 base64，数据量回增加30％，对性能回有些损耗，但是，损耗不大
+
+      64 位 安装 ：
+      ARCHFLAGS="-arch i386 -arch x86_64" python setup.py install
+
